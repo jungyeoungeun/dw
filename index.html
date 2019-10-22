@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	body,h1,p{margin:0:padding:0;}
+	.rain{width:1px;height:50px;
+	      background:white;position:absolute;
+	      animation: rr 0.5s infinite}
+	  @keyframes rr{
+	  	from{bottom:1000px;}
+	  		to{bottom:0px;}
+	  }
+
+	  .img{width:90%; height:100%;display:block; margin:auto;}
+
+</style>
+<head>
+	<title></title>
+</head>
+<body style="background:black;">
+<div class="rain" id="rrr"></div>
+<audio src="starfall.mp3"></audio>
+<img src="1010.gif" class="img" id="p1"> 
+<script type=>
+	for(var i=0; i<50; i++){
+	var tt = rrr.cloneNode(true);
+	tt.id = i;
+	tt.style.animationDelay = i*0.08 + "s";
+	tt.style.left = i*100 + "px";
+	tt.style.animationDuration = "0.3s";
+	tt.style.height = Math.random()*500 + "px";
+	tt.style.width = 5 + "px";
+	
+	document.body.appendChild(tt);
+
+}
+
+//rgb(32,45,0)
+function rgbmake(){
+var a = Math.random()*255;
+var b = Math.random()*255;
+var c = Math.random()*255;
+var d = "rgb("+ a + "," + b + "," + c + ")";
+return d;
+}
+
+function a(num){
+	var cc = Math.random()*num;
+	return cc
+}
+</script>
+</body>
+</html>
